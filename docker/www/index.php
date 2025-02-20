@@ -7,9 +7,6 @@ include('./include/config.php');
 
 <link rel="stylesheet" href="./css/style_index.css">
 <!--Affichage des animaux sous forme de cards-->
-    <main>
-        <h1>Home</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
   <div class="container-fluid">
     <div class="row">
       <!-- Barre de navigation gauche -->
