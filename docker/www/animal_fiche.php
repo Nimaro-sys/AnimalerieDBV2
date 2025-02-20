@@ -15,7 +15,18 @@ include_once('./include/header.php');
     </div>
   </div>
 </div>
-
+<?php
+// Informations de l'animal (peuvent venir d'une base de données)
+$animal = [
+    'nom' => '',
+    'sexe' => '',
+    'age' => '',
+    'identification' => '',
+    'pays' => '',
+    'histoire' => '',
+    'image' => ''
+];
+?>
 <?php
 include_once('./include/footer.php');
 ?>
