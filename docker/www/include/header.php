@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style_guichard.css">
     <link rel="stylesheet" href="css/style_romain.css">
     <link rel="stylesheet" href="css/style_kenan.css">
+    <script src="JS/script.js"></script>
 </head>
 <body>
     <header>
@@ -250,4 +251,4 @@
         
 
 
-    </header>
+</header>
