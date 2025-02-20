@@ -1,6 +1,8 @@
 <?php
 include_once('./include/header.php');
 
+include('./include/config.php');
+
 ?>
 
 <link rel="stylesheet" href="./css/style_index.css">
