@@ -66,7 +66,7 @@ include_once('./include/header.php');
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="./images/dupont.jpg" class="img-fluid mb-3" alt="Dupont Jean">
+                        <img src="./images/personnel/dupont.jpg" class="img-fluid mb-3" alt="Dupont Jean">
                         <p><strong>Nom :</strong> Dupont Jean</p>
                         <p><strong>Rôle :</strong> Soigneur</p>
                         <p><strong>Âge :</strong> 35 ans</p>
@@ -89,7 +89,7 @@ include_once('./include/header.php');
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="./images/marie.jpg" class="img-fluid mb-3" alt="Martin Marie">
+                        <img src="./images/personnel/marie.jpg" class="img-fluid mb-3" alt="Martin Marie">
                         <p><strong>Nom :</strong> Martin Marie</p>
                         <p><strong>Rôle :</strong> Soigneuse</p>
                         <p><strong>Âge :</strong> 28 ans</p>
@@ -114,7 +114,7 @@ include_once('./include/header.php');
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                        <img src="./images/claire.jpg" class="img-fluid mb-3" alt="Bernard Luc">
+                        <img src="./images/personnel/claire.jpg" class="img-fluid mb-3" alt="Bernard Luc">
                         <p><strong>Nom :</strong> Bernard Luc</p>
                         <p><strong>Rôle :</strong> Soigneur</p>
                         <p><strong>Âge :</strong> 42 ans</p>
@@ -136,7 +136,7 @@ include_once('./include/header.php');
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <div class="modal-body">
-                <img src="./images/sophie.jpg" class="img-fluid mb-3" alt="Petit Sophie">
+                <img src="./images/personnel/sophie.jpg" class="img-fluid mb-3" alt="Petit Sophie">
                 <p><strong>Nom :</strong> Petit Sophie</p>
                 <p><strong>Rôle :</strong> Soigneuse</p>
                 <p><strong>Âge :</strong> 30 ans</p>
@@ -159,7 +159,7 @@ include_once('./include/header.php');
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <div class="modal-body">
-                <img src="./images/laura.jpg" class="img-fluid mb-3" alt="Leroy Pierre">
+                <img src="./images/personnel/laura.jpg" class="img-fluid mb-3" alt="Leroy Pierre">
                 <p><strong>Nom :</strong> Leroy Pierre</p>
                 <p><strong>Rôle :</strong> Soigneur</p>
                 <p><strong>Âge :</strong> 40 ans</p>
@@ -182,7 +182,7 @@ include_once('./include/header.php');
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <div class="modal-body">
-                <img src="./images/pierre.jpg" class="img-fluid mb-3" alt="Moreau Claire">
+                <img src="./images/personnel/pierre.jpg" class="img-fluid mb-3" alt="Moreau Claire">
                 <p><strong>Nom :</strong> Moreau Claire</p>
                 <p><strong>Rôle :</strong> Administratif</p>
                 <p><strong>Âge :</strong> 33 ans</p>
