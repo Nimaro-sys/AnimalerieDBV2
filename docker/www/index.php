@@ -1,8 +1,6 @@
 <?php
 include_once('./include/header.php');
 
-include('./include/config.php');
-
 ?>
 
 <link rel="stylesheet" href="./css/style_index.css">
@@ -29,45 +27,35 @@ include('./include/config.php');
           </form>
         </div>
         
-        <h1 class="header-title text-white fs-2">Animaux</h1>
-        <ul class="nav flex-column mt-3">
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="chiens.html">Chiens</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="chevaux.html">Chevaux</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="elephants.html">Éléphants</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="loups.html">Loups</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="chats.html">Chats</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="serpents.html">Serpents</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="Âne.html">Âne</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="Mulets.html">Mulets</a></li>
-          <li class="nav-item"><a class="nav-link text-white fw-bold" href="Girafe.html">Girafe</a></li>
-        </ul>
-        <h1 class="header-title text-white fs-3">Personnel</h1>
-        <ul class="nav flex-column mt-3">
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalJean">Dupont Jean</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalMarie">Martin Marie</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalLuc">Bernard Luc</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalSophie">Petit Sophie</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalPierre">Leroy Pierre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalClaire">Moreau Claire</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalThomas">Lefebvre Thomas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalLaura">Roux Laura</a>
-            </li>
-        </ul>
+        <h1 class="header-title text-white fs-2 d-flex align-items-center justify-content-between">
+        Animaux
+        <span class="toggle-icon" data-target="#animauxList">▼</span>
+    </h1>
+    <ul id="animauxList" class="nav flex-column mt-3">
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="chiens.html">Chiens</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="chevaux.html">Chevaux</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="elephants.html">Éléphants</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="loups.html">Loups</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="chats.html">Chats</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="serpents.html">Serpents</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="Âne.html">Âne</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="Mulets.html">Mulets</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="Girafe.html">Girafe</a></li>
+    </ul>
+    <h1 class="header-title text-white fs-3 d-flex align-items-center justify-content-between">
+        Personnel
+        <span class="toggle-icon" data-target="#personnelList">▼</span>
+    </h1>
+    <ul id="personnelList" class="nav flex-column mt-3">
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalJean">Dupont Jean</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalMarie">Martin Marie</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalLuc">Bernard Luc</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalSophie">Petit Sophie</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalPierre">Leroy Pierre</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalClaire">Moreau Claire</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalThomas">Lefebvre Thomas</a></li>
+        <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalLaura">Roux Laura</a></li>
+    </ul>
         
         <!-- Modal for Jean -->
         <div class="modal fade" id="modalJean" tabindex="-1" aria-labelledby="modalJeanLabel" aria-hidden="true">
@@ -217,7 +205,7 @@ include('./include/config.php');
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <div class="modal-body">
-                <img src="./images/claire3.jpg" class="img-fluid mb-3" alt="Lefebvre Thomas">
+                <img src="/images/personnel/claire3.jpg" class="img-fluid mb-3" alt="Lefebvre Thomas">
                 <p><strong>Nom :</strong> Lefebvre Thomas</p>
                 <p><strong>Rôle :</strong> Cadre</p>
                 <p><strong>Âge :</strong> 38 ans</p>
@@ -240,7 +228,7 @@ include('./include/config.php');
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
             </div>
             <div class="modal-body">
-                <img src="./images/claire1.jpg" class="img-fluid mb-3" alt="Roux Laura">
+                <img src="./images/personnel/claire1.jpg" class="img-fluid mb-3" alt="Roux Laura">
                 <p><strong>Nom :</strong> Roux Laura</p>
                 <p><strong>Rôle :</strong> Administratif</p>
                 <p><strong>Âge :</strong> 27 ans</p>
@@ -270,7 +258,7 @@ include('./include/config.php');
               <!-- Card 1 -->
               <div class="col-md-4 mb-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="images/Chien1.jpg" class="card-img-top" alt="Nom de l'animal">
+                  <img src="images/animal/Chien1.jpg" class="card-img-top" alt="Nom de l'animal">
                   <div class="card-body">
                     <h5 class="card-title">Thor</h5>
                     <p class="card-text">
@@ -293,7 +281,7 @@ include('./include/config.php');
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                      <img src="images/Chien1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                      <img src="images/animal/Chien1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                       <p><strong>Nom :</strong> Thor</p>
                       <p><strong>Sexe :</strong> Masculin</p>
                       <p><strong>Âge :</strong> 3 ans</p>
@@ -312,7 +300,7 @@ include('./include/config.php');
               <!-- Card 2 -->
               <div class="col-md-4 mb-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="./images/chevalnoir.jpg" class="card-img-top" alt="Nom de l'animal">
+                  <img src="./images/animal/chevalnoir.jpg" class="card-img-top" alt="Nom de l'animal">
                   <div class="card-body">
                     <h5 class="card-title">Shadow</h5>
                     <p class="card-text">
@@ -333,7 +321,7 @@ include('./include/config.php');
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                      <img src="./images/chevalnoir.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                      <img src="./images/animal/chevalnoir.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                       <p><strong>Nom :</strong> Shadow</p>
                       <p><strong>Sexe :</strong> Masculin</p>
                       <p><strong>Âge :</strong> 5 ans</p>
@@ -352,7 +340,7 @@ include('./include/config.php');
               <!-- Card 3 -->
               <div class="col-md-4 mb-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="images/Elephant1.jpg" class="card-img-top" alt="Nom de l'animal">
+                  <img src="images/animal/Elephant1.jpg" class="card-img-top" alt="Nom de l'animal">
                   <div class="card-body">
                     <h5 class="card-title">trump</h5>
                     <p class="card-text">
@@ -373,7 +361,7 @@ include('./include/config.php');
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                      <img src="images/Elephant1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                      <img src="images/animal/Elephant1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                       <p><strong>Nom :</strong> trump</p>
                       <p><strong>Sexe :</strong> Masculin</p>
                       <p><strong>Âge :</strong> 20 ans</p>
@@ -394,7 +382,7 @@ include('./include/config.php');
               <!-- Card 4 -->
               <div class="col-md-4 mb-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="images/Loup1.jpg" class="card-img-top" alt="Nom de l'animal">
+                  <img src="images/animal/Loup1.jpg" class="card-img-top" alt="Nom de l'animal">
                   <div class="card-body">
                     <h5 class="card-title">minessota</h5>
                     <p class="card-text">
@@ -415,7 +403,7 @@ include('./include/config.php');
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                      <img src="images/Loup1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                      <img src="images/animal/Loup1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                       <p><strong>Nom :</strong> minessota</p>
                       <p><strong>Sexe :</strong> Féminin</p>
                       <p><strong>Âge :</strong> 4 ans</p>
@@ -434,7 +422,7 @@ include('./include/config.php');
               <!-- Card 5 -->
               <div class="col-md-4 mb-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="images/Chat1.jpg" class="card-img-top" alt="Nom de l'animal">
+                  <img src="images/animal/Chat1.jpg" class="card-img-top" alt="Nom de l'animal">
                   <div class="card-body">
                     <h5 class="card-title">garfield</h5>
                     <p class="card-text">
@@ -455,7 +443,7 @@ include('./include/config.php');
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                      <img src="images/Chat1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                      <img src="images/animal/Chat1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                       <p><strong>Nom :</strong> garfield</p>
                       <p><strong>Sexe :</strong> Masculin</p>
                       <p><strong>Âge :</strong> 3 ans</p>
@@ -474,7 +462,7 @@ include('./include/config.php');
               <!-- Card 6 -->
               <div class="col-md-4 mb-4">
                 <div class="card" style="width: 18rem;">
-                  <img src="images/Serpent1.jpg" class="card-img-top" alt="Nom de l'animal">
+                  <img src="images/animal/Serpent1.jpg" class="card-img-top" alt="Nom de l'animal">
                   <div class="card-body">
                     <h5 class="card-title">Kaa</h5>
                     <p class="card-text">
@@ -495,7 +483,7 @@ include('./include/config.php');
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                      <img src="images/Serpent1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                      <img src="images/animal/Serpent1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                       <p><strong>Nom :</strong>Kaa</p>
                       <p><strong>Sexe :</strong> Féminin</p>
                       <p><strong>Âge :</strong> 2 ans</p>
@@ -516,7 +504,7 @@ include('./include/config.php');
                 <!-- Card 7: Grisou -->
                 <div class="col-md-4 mb-4">
                   <div class="card" style="width: 18rem;">
-                    <img src="./images/ane1.jpg" class="card-img-top" alt="Nom de l'animal">
+                    <img src="./images/animal/ane1.jpg" class="card-img-top" alt="Nom de l'animal">
                     <div class="card-body">
                       <h5 class="card-title">bourriquet</h5>
                       <p class="card-text">
@@ -537,7 +525,7 @@ include('./include/config.php');
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                       </div>
                       <div class="modal-body">
-                        <img src="./images/ane1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                        <img src="./images/animal/ane1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                         <p><strong>Nom :</strong> bourriquet</p>
                         <p><strong>Sexe :</strong> Masculin</p>
                         <p><strong>Âge :</strong> 7 ans</p>
@@ -556,7 +544,7 @@ include('./include/config.php');
                 <!-- Card 8: Luna -->
                 <div class="col-md-4 mb-4">
                   <div class="card" style="width: 18rem;">
-                    <img src="images/Mulet1.jpg" class="card-img-top" alt="Nom de l'animal">
+                    <img src="images/animal/Mulet1.jpg" class="card-img-top" alt="Nom de l'animal">
                     <div class="card-body">
                       <h5 class="card-title">agassi</h5>
                       <p class="card-text">
@@ -577,7 +565,7 @@ include('./include/config.php');
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                       </div>
                       <div class="modal-body">
-                        <img src="images/Mulet1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                        <img src="images/animal/Mulet1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                         <p><strong>Nom :</strong> agassi</p>
                         <p><strong>Sexe :</strong> Féminin</p>
                         <p><strong>Âge :</strong> 5 ans</p>
@@ -596,7 +584,7 @@ include('./include/config.php');
                 <!-- Card 9: Zara -->
                 <div class="col-md-4 mb-4">
                   <div class="card" style="width: 18rem;">
-                    <img src="./images/girafe.jpg" class="card-img-top" alt="Nom de l'animal">
+                    <img src="./images/animal/girafe.jpg" class="card-img-top" alt="Nom de l'animal">
                     <div class="card-body">
                       <h5 class="card-title">sophie</h5>
                       <p class="card-text">
@@ -617,7 +605,7 @@ include('./include/config.php');
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                       </div>
                       <div class="modal-body">
-                        <img src="./images/girafe.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                        <img src="./images/animal/girafe.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
                         <p><strong>Nom :</strong> sophie</p>
                         <p><strong>Sexe :</strong> Féminin</p>
                         <p><strong>Âge :</strong> 8 ans</p>
