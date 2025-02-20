@@ -59,7 +59,7 @@
         <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalThomas">Lefebvre Thomas</a></li>
         <li class="nav-item"><a class="nav-link text-white fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modalLaura">Roux Laura</a></li>
     </ul>
-        
+</nav>
         <!-- Modal for Jean -->
         <div class="modal fade" id="modalJean" tabindex="-1" aria-labelledby="modalJeanLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -68,7 +68,7 @@
                         <h5 class="modal-title" id="modalJeanLabel">Détails de Dupont Jean</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
-                    </nav>
+
                     <div class="modal-body">
                         <img src="./images/personnel/dupont.jpg" class="img-fluid mb-3" alt="Dupont Jean">
                         <p><strong>Nom :</strong> Dupont Jean</p>
