@@ -278,7 +278,9 @@ include_once('./include/header.php');
                       <strong>Sexe :</strong> M<br>
                       <strong>Âge :</strong> 3 ans
                     </p>
-                    <button type="button" class="btn btn-lightbrown" data-bs-toggle="modal" data-bs-target="#animalModal">Plus d'informations</button>
+                    <a href="animal_fiche.php">
+                    <button type="button" class="btn btn-lightbrown"  data-bs-toggle="modal" data-bs-target="#animalModal">Plus d'informations</button>
+                    </a>
                   </div>
                 </div>
               </div>
