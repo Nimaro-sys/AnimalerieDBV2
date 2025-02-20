@@ -1,0 +1,37 @@
+body { height: 100vh; }
+.sidebar { height: 100vh; overflow-y: auto; }
+.header-title { 
+  text-align: center; 
+  font-size: 2.5rem; 
+  font-weight: 900; 
+  color: #000; 
+  letter-spacing: 2px; 
+  padding: 15px 0; 
+  text-transform: uppercase; 
+}
+.connexion { font-size: 1rem; font-weight: 600; padding: 5px; }
+#connexionForm { display: none; } /* Masquer le formulaire au début */
+
+.bg-image {
+  background-image: url('./images.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgba(255, 255, 255, 0.438);
+  /* Retirer la hauteur fixe ici */
+}
+
+/* Bouton "Plus d'informations" en marron clair */
+.btn-lightbrown {
+  background-color: #D2B48C; /* couleur marron clair */
+  border-color: #D2B48C;
+  color: #000; /* texte en noir */
+}
+.btn-lightbrown:hover {
+  background-color: #c0a080;
+  border-color: #c0a080;
+}
+
+/* Forcer le texte de la modale en noir */
+.modal-content {
+  color: #000;
+}
