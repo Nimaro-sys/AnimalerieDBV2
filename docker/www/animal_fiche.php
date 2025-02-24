@@ -22,6 +22,14 @@ require_once ('include/header.php');
                     <p class="card-text">
                         <strong>Sexe :</strong> <?php echo $animal['genre']; ?><br>
                         <strong>Numéro d'identification :</strong> <?php echo $animal['numero']; ?><br>
+                        <strong> date arrivée:</strong> <?php echo $animal['date_arrivee']; ?><br>
+                        <strong>date de décès:</strong> <?php 
+                        // si la date de décès est vide mettre N/A
+                        if ($animal['date_deces'] == NULL) {
+                            echo "N/A";
+                        } else {
+                            echo $animal['date_deces'];
+                        } ?><br>
                         <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
                         <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                     </p>

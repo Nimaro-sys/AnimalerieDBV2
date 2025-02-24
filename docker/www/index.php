@@ -29,10 +29,8 @@ include_once ('include/config.php');
                         <h5 class="card-title"><?php echo $animal['nom']; ?></h5>
                         <p class="card-text">
                             <strong>Sexe :</strong> <?php echo $animal['genre']; ?><br>
-                            <strong>Date d'arrivée:</strong> <?php echo $animal['date_arrivee']; ?><br>
                             <strong>Numéro d'identification :</strong> <?php echo $animal['numero']; ?><br>
                             <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
-                            <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                         </p>
                         <a href="animal_fiche.php?animal_id=<?php echo $animal['id_animal']; ?>" class="btn btn-primary">Voir la fiche</a>
                     </div>
