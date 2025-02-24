@@ -30,7 +30,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Refuge RKG</a>
+            <a class="navbar-brand" href="index.php">Refuge RKG</a>
             
             <!-- Menu burger custom -->
             <button id="burgerButton" class="btn btn-outline-light">☰</button>

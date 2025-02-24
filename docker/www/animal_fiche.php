@@ -1,32 +1,37 @@
 <?php
-$animal = [
-    'nom' => 'Thor',
-    'sexe' => 'M',
-    'age' => 3,
-    'identification' => 'CHI001',
-    'pays' => 'Islande',
-    'histoire' => 'Thor adore jouer à attraper le bâton, mais il ramène toujours des pierres à la place. On l\'appelle le Dieu du Mauvais Lancer.',
-    'image' => 'images/animal/Chien1.jpg',
-];
+
+require_once ('include/config.php');
+
+$sql = "SELECT * FROM animal WHERE id_animal = :id";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['id' => $_GET['animal_id']]);
+$animal = $stmt->fetch();
+
+require_once ('include/header.php');
 ?>
 
-<div class="container">
-    <div class="row">
+<div class="container mt-5">
+    <div class="row justify-content-center">
         <!-- Card 1 -->
-        <div class="col-md-4 mb-4">
-            <div class="card" style="width: 18rem;">
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm" style="width: 100%;">
                 <!-- Image dynamique de l'animal -->
-                <img src="<?php echo $animal['image']; ?>" class="card-img-top" alt="Image de <?php echo $animal['nom']; ?>">
+                <img src="<?php echo './images/animal/' . $animal['image']; ?>" class="card-img-top" alt="Image de <?php echo $animal['nom']; ?>" style="object-fit: cover; height: 300px;">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $animal['nom']; ?></h5>
+                    <h5 class="card-title text-center"><?php echo $animal['nom']; ?></h5>
                     <p class="card-text">
                         <strong>Sexe :</strong> <?php echo $animal['genre']; ?><br>
-                        <strong>Numéro d'identification :</strong> <?php echo $animal['id_animal']; ?><br>
+                        <strong>Numéro d'identification :</strong> <?php echo $animal['numero']; ?><br>
                         <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
                         <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                     </p>
+                    <button type="button" class="btn btn-primary w-100">
+                        adopter
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<?php require_once ('include/footer.php'); ?>
