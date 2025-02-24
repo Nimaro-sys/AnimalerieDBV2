@@ -4,7 +4,7 @@ include_once ('include/config.php');
 ?>
 
 
-<body>
+
 
 <!-- HEADER avec Menu Burger -->
 <?php include_once ('include/header.php'); ?>
