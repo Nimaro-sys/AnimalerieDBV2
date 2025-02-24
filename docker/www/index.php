@@ -72,7 +72,7 @@ include_once ('include/config.php');
 
 <!-- FOOTER -->
 <?php include_once './include/footer.php'; ?>
-
+<script src="JS/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

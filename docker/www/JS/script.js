@@ -1,27 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Gestion des icônes de bascule
-    document.querySelectorAll(".toggle-icon").forEach(icon => {
-        icon.addEventListener("click", () => {
-            const target = document.querySelector(icon.getAttribute("data-target"));
-            if (target.style.display === "none" || target.style.display === "") {
-                target.style.display = "block";
-                icon.textContent = "▲"; // Flèche vers le haut
-            } else {
-                target.style.display = "none";
-                icon.textContent = "▼"; // Flèche vers le bas
-            }
-        });
-    });
+    console.log("DOM chargé !");
 
-    // Gestion du menu burger (votre script)
     const burgerButton = document.getElementById('burgerButton');
     const burgerMenu = document.getElementById('burgerMenu');
-    
-    burgerButton.addEventListener('click', function() {
-        if (burgerMenu.style.display === 'none') {
-            burgerMenu.style.display = 'block';
-        } else {
-            burgerMenu.style.display = 'none';
-        }
-    });
+
+    console.log("burgerButton:", burgerButton);
+    console.log("burgerMenu:", burgerMenu);
+
+    if (burgerButton && burgerMenu) {
+        burgerButton.addEventListener('click', () => {
+            burgerMenu.style.display = burgerMenu.style.display === 'none' ? 'block' : 'none';
+        });
+    } else {
+        console.error("Erreur : Vérifie les IDs de tes éléments !");
+    }
 });
