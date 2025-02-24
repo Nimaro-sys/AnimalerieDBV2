@@ -56,6 +56,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="backoffice.php">Backoffice</a>
                     </li>
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bonjour, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
