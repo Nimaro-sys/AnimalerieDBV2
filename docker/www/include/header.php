@@ -60,8 +60,20 @@
         </div>
     </nav>
 </header>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const burgerButton = document.getElementById('burgerButton');
+        const burgerMenu = document.getElementById('burgerMenu');
 
+        if (burgerButton && burgerMenu) {
+            burgerButton.addEventListener('click', () => {
+                burgerMenu.style.display = burgerMenu.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="JS/script.js"></script>
 
 </body>
 </html>
