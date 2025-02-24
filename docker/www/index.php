@@ -12,7 +12,6 @@ include_once ('include/config.php');
 <!-- Contenu principal : Affichage des animaux -->
 <main class="container mt-5">
     <h2 class="mb-4 text-center">Bienvenue au Refuge RKG</h2>
-    <p class="text-center">Sélectionnez une catégorie dans la barre latérale pour consulter leur fiche.</p>
 
     <div class="row">
         <?php
