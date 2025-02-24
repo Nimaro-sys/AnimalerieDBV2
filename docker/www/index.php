@@ -23,28 +23,9 @@ include_once ('include/config.php');
 
     <div class="row">
         <?php
-        // Exemple d'affichage des animaux avec des données dynamiques
-        $animals = [
-            [
-                'nom' => 'Thor',
-                'sexe' => 'M',
-                'age' => 3,
-                'identification' => 'CHI001',
-                'pays' => 'Islande',
-                'histoire' => 'Thor adore jouer à attraper le bâton...',
-                'image' => 'images/animal/Chien1.jpg',
-            ],
-            [
-                'nom' => 'Shadow',
-                'sexe' => 'M',
-                'age' => 5,
-                'identification' => 'CHE001',
-                'pays' => 'Espagne',
-                'histoire' => 'Shadow est un cheval noble...',
-                'image' => 'images/animal/chevalnoir.jpg',
-            ],
-            // Ajoute plus d'animaux ici
-        ];
+    $sql = "SELECT * FROM animal";
+    $stmt = $pdo->query($sql);
+    $animals = $stmt->fetchAll();
 
         foreach ($animals as $animal) {
             ?>
@@ -54,13 +35,12 @@ include_once ('include/config.php');
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $animal['nom']; ?></h5>
                         <p class="card-text">
-                            <strong>Sexe :</strong> <?php echo $animal['sexe']; ?><br>
-                            <strong>Âge :</strong> <?php echo $animal['age']; ?> ans<br>
-                            <strong>Numéro d'identification :</strong> <?php echo $animal['identification']; ?><br>
+                            <strong>Sexe :</strong> <?php echo $animal['genre']; ?><br>
+                            <strong>Numéro d'identification :</strong> <?php echo $animal['id_animal']; ?><br>
                             <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
-                            <strong>Histoire :</strong> <?php echo $animal['histoire']; ?>
+                            <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                         </p>
-                        <a href="animal_fiche.php?animal_id=<?php echo $animal['identification']; ?>" class="btn btn-primary">Voir la fiche</a>
+                        <a href="animal_fiche.php?animal_id=<?php echo $animal['id_animal']; ?>" class="btn btn-primary">Voir la fiche</a>
                     </div>
                 </div>
             </div>

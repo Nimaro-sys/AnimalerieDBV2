@@ -20,11 +20,10 @@ $animal = [
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $animal['nom']; ?></h5>
                     <p class="card-text">
-                        <strong>Sexe :</strong> <?php echo $animal['sexe']; ?><br>
-                        <strong>Âge :</strong> <?php echo $animal['age']; ?> ans<br>
-                        <strong>Numéro d'identification :</strong> <?php echo $animal['identification']; ?><br>
+                        <strong>Sexe :</strong> <?php echo $animal['genre']; ?><br>
+                        <strong>Numéro d'identification :</strong> <?php echo $animal['id_animal']; ?><br>
                         <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
-                        <strong>Histoire :</strong> <?php echo $animal['histoire']; ?>
+                        <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                     </p>
                 </div>
             </div>
