@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Refuge RKG</a>
@@ -20,7 +19,6 @@
         </div>
     </nav>
 </header>
-=======
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -35,4 +33,3 @@
 </head>
 <body>
  
->>>>>>> efc260141fa63f6957fabbe8b399565dda8b1ffc
