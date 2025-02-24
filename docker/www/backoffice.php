@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    header("Location: ../login.php");
+    header("Location: login.php");
     exit;
 }
 
-require_once '../includes/config.php';
+require_once 'include/config.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ require_once '../includes/config.php';
 
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['user']; ?>!</h2>
-    <a href="../logout.php" class="btn btn-danger">Déconnexion</a>
+    <a href="localhost?=logout" class="btn btn-danger">Déconnexion</a>
 
     <h3>Liste des animaux</h3>
     <table class="table table-bordered">
