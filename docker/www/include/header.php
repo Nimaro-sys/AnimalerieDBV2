@@ -35,9 +35,9 @@
             <!-- Menu burger custom -->
             <button id="burgerButton" class="btn btn-outline-light">☰</button>
             <div id="burgerMenu" class="nav flex-column bg-dark p-2">
-                <a class="nav-link text-white fw-bold" href="#">À propos de nous</a>
-                <a class="nav-link text-white fw-bold" href="#">Contact</a>
-                <a class="nav-link text-white fw-bold" href="#">Services</a>
+                <a class="nav-link text-white fw-bold" href="index.php">Accueil</a>
+                <a class="nav-link text-white fw-bold" href="login.php">Se connecter</a>
+                <a class="nav-link text-white fw-bold" href="backoffice.php">Gérer le site</a>
             </div>
 
             <!-- Bouton du menu Bootstrap -->
@@ -47,15 +47,6 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Connexion Employé</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="backoffice.php">Backoffice</a>
-                    </li>
                     <?php if (isset($_SESSION['username'])): ?>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Bonjour, <?php echo htmlspecialchars($_SESSION['username']); ?></a>

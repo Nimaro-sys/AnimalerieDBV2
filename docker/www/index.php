@@ -3,9 +3,6 @@ session_start();
 include_once ('include/config.php');
 ?>
 
-
-
-
 <!-- HEADER avec Menu Burger -->
 <?php include_once ('include/header.php'); ?>
 
