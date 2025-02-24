@@ -19,10 +19,10 @@ catch (PDOException $e) {
 }
 
 // test de la connexion à la base de données
-//$sql = "SELECT * FROM animal";
-//$stmt = $pdo->query($sql);
-//$animals = $stmt->fetchAll();
-//echo "<pre>";
-//print_r($animals);
-//echo "</pre>";
+// $sql = "SELECT * FROM animal";
+// $stmt = $pdo->query($sql);
+// $animals = $stmt->fetchAll();
+// echo "<pre>";
+// print_r($animals);
+// echo "</pre>";
 ?>
