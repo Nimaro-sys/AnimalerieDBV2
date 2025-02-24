@@ -31,12 +31,13 @@ include_once ('include/config.php');
             ?>
             <div class="col-md-4 mb-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="<?php echo $animal['image']; ?>" class="card-img-top" alt="Image de <?php echo $animal['nom']; ?>">
+                    <img src="<?php echo './images/animal/' . $animal['image']; ?>" class="card-img-top" alt="Image de <?php echo $animal['nom']; ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $animal['nom']; ?></h5>
                         <p class="card-text">
                             <strong>Sexe :</strong> <?php echo $animal['genre']; ?><br>
-                            <strong>Numéro d'identification :</strong> <?php echo $animal['id_animal']; ?><br>
+                            <strong>Date d'arrivée:</strong> <?php echo $animal['date_arrivee']; ?><br>
+                            <strong>Numéro d'identification :</strong> <?php echo $animal['numero']; ?><br>
                             <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
                             <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                         </p>
