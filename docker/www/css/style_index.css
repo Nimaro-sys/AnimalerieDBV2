@@ -1,4 +1,8 @@
-body { height: 100vh; }
+body { height: 100vh;
+  background-color: #9db5ce; /* Couleur de fond (modifie selon tes besoins) */
+  background-image: url('../images/background.jpg'); /* Image de fond (remplace avec ton image) */
+  background-size: cover;
+  background-position: center; }
 .sidebar { height: 100vh; overflow-y: auto; }
 .header-title { 
   text-align: center; 
