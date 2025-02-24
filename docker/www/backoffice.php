@@ -6,6 +6,8 @@ if (!isset($_SESSION['user'])) {
 }
 
 require_once 'include/config.php';
+
+require_once 'include/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,18 +30,16 @@ require_once 'include/config.php';
             <tr>
                 <th>Nom</th>
                 <th>Sexe</th>
-                <th>Âge</th>
                 <th>Pays d'origine</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $stmt = $pdo->query("SELECT * FROM animaux");
+            $stmt = $pdo->query("SELECT * FROM animal");
             while ($animal = $stmt->fetch()) {
                 echo "<tr>
                         <td>{$animal['nom']}</td>
-                        <td>{$animal['sexe']}</td>
-                        <td>{$animal['age']} ans</td>
+                        <td>{$animal['genre']}</td>
                         <td>{$animal['pays']}</td>
                       </tr>";
             }
@@ -48,5 +48,6 @@ require_once 'include/config.php';
     </table>
 </div>
 
-</body>
-</html>
+<?php
+require_once 'include/footer.php';
+?>
