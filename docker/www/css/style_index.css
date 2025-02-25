@@ -1,8 +1,13 @@
-body { height: 100vh;
-  background-color: #92b0d0; /* Couleur de fond (modifie selon tes besoins) */
-  background-image: url('../images/background.jpg'); /* Image de fond (remplace avec ton image) */
-  background-size: cover;
-  background-position: center; }
+body {
+  height: 100vh;
+  background-color: #92b0d0; /* Couleur de fond */
+  background-image: url('../images/background.jpg'); /* Image de fond */
+  background-size: cover; /* Couvre tout l'écran */
+  background-position: center; /* Centre l’image */
+  background-repeat: no-repeat; /* Empêche la répétition */
+  background-attachment: fixed;
+}
+
 
 .sidebar { height: 100vh; overflow-y: auto; }
 
