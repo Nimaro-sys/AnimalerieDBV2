@@ -18,7 +18,10 @@ catch (PDOException $e) {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
-// test de la connexion à la base de données
+// DEBUG : test de la connexion à la base de données
+// RESULTAT ATTENDU : un tableau contenant tous les animaux
+// UTILISATION : à commenter après utilisation
+
 // $sql = "SELECT * FROM animal";
 // $stmt = $pdo->query($sql);
 // $animals = $stmt->fetchAll();
