@@ -8,7 +8,7 @@ include_once ('include/config.php');
 
 <!-- Contenu principal : Affichage des animaux -->
 <main class="container mt-5">
-    <h2 class="mb-4 text-center">Bienvenue au Refuge RKG</h2>
+    <h2 class="mb-4 text-center">Bienvenue au Refuge RKGT</h2>
 
     <div class="row">
         <?php

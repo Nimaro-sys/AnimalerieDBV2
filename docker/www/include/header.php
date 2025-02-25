@@ -70,10 +70,11 @@
     padding: 8px 12px;
     border-radius: 8px; /* Ajoute un arrondi léger */
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-bottom: 10px; /* Espace entre les éléments */
 }
 
 .navbar-nav .nav-link:hover {
-    background-color:rgb(112, 78, 5);
+    background-color:rgb(9, 78, 32);
     color: white;
     border-radius: 12px; /* Arrondi plus marqué au survol */
 }
@@ -81,7 +82,7 @@
 
 /* Met en surbrillance l'animal sélectionné */
 .navbar-nav .nav-link.active {
-    background-color:rgb(112, 78, 5);
+    background-color:rgb(9, 78, 32);
     color: white;
     font-weight: 600;
 }
@@ -92,6 +93,14 @@
 
 .main-content {
     padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Poppins'
+    text-align: center; /* Centrer le texte */
+    color:rgb(255, 255, 255);
+    padding: 20px; /* Ajouter un peu de remplissage autour du titre */
 }
 
 /* Responsive pour les petits écrans */
