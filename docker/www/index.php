@@ -28,13 +28,14 @@ include_once ('include/config.php');
                             <strong>Numéro d'identification :</strong> <?php echo $animal['numero']; ?><br>
                             <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
                         </p>
-                        <a href="animal_fiche.php?animal_id=<?php echo $animal['id_animal']; ?>" class="btn btn-primary">Voir la fiche</a>
+                        <a href="animal_fiche.php?animal_id=<?php echo $animal['id_animal']; ?>" class="btn btn-secondary">Voir la fiche</a>
                     </div>
                 </div>
             </div>
             <?php
         }
         ?>
+        
     </div>
 </main>
 

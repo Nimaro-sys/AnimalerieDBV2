@@ -85,7 +85,21 @@
     color: white;
     font-weight: 600;
 }
+/* Ajoute un padding à gauche pour décaler le contenu */
+.container {
+    padding-left: 200px; /* Même largeur que la navbar pour décaler les cartes */
+}
 
+.main-content {
+    padding: 20px;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 0; /* Aucun décalage sur les petits écrans */
+    }
+}
 
     </style>
 </head>
