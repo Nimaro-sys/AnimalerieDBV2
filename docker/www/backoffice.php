@@ -6,6 +6,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 require_once 'include/config.php';
+
 require_once 'include/header.php';
 
 // Ajout d'un animal
@@ -32,8 +33,8 @@ if (isset($_GET['supprimer'])) {
 
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['user']; ?>!</h2>
-    <a href="index.php" class="btn btn-danger">Déconnexion</a>
-    <hr>
+    <a href="logout.php" class="btn btn-danger">Déconnexion</a>
+
     <h3>Liste des animaux</h3>
     <table class="table table-bordered">
         <thead>
@@ -113,4 +114,6 @@ if (isset($_GET['supprimer'])) {
 
 <br>
 
-<?php require_once 'include/footer.php'; ?>
+<?php
+require_once 'include/footer.php';
+?>

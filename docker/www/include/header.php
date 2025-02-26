@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refuge RKG</title>
+    <title>Refuge RKGT</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style_index.css">
     <link rel="stylesheet" href="css/style_guichard.css">
@@ -44,6 +44,14 @@
             color: white;
             font-weight: 600;
         }
+
+        h2 {
+    color: white;
+    font-family: 'Poppins', sans-serif; /* Police élégante */
+    font-weight: 600; /* Un peu plus épais mais pas trop */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); /* Effet lumineux subtil */
+}
+
     </style>
 </head>
 <body>
@@ -51,7 +59,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Refuge RKG</a>
+            <a class="navbar-brand" href="index.php">Refuge RKGT</a>
             
             <!-- Menu burger custom -->
             <button id="burgerButton" class="btn btn-outline-light me-3">☰</button>
