@@ -10,19 +10,29 @@ require_once 'include/config.php';
 require_once 'include/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backoffice</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
-
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['user']; ?>!</h2>
-    <a href="localhost?=logout" class="btn btn-danger">Déconnexion</a>
+    <a href="logout.php" class="btn btn-danger">Déconnexion</a>
+
+    <h3>Ajouter un animal</h3>
+    <form method="POST" class="mb-4">
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" name="nom" id="nom" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="genre" class="form-label">Sexe</label>
+            <select name="genre" id="genre" class="form-control" required>
+                <option value="M">Mâle</option>
+                <option value="F">Femelle</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="pays" class="form-label">Pays d'origine</label>
+            <input type="text" name="pays" id="pays" class="form-control" required>
+        </div>
+        <button type="submit" name="ajouter" class="btn btn-success">Ajouter</button>
+    </form>
 
     <h3>Liste des animaux</h3>
     <table class="table table-bordered">
