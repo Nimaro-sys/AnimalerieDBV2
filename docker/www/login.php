@@ -1,10 +1,6 @@
 <?php
-session_start(); // Doit être en tout premier
-
-// Vérification de la connexion
-$employees = [
-    'admin' => 'password123', // Exemple : login => mot de passe
-];
+session_start();
+include_once 'include/config.php';
 
 $error = "";
 
@@ -12,13 +8,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    if (isset($employees[$username]) && $employees[$username] === $password) {
-        $_SESSION['user'] = $username;
-        $_SESSION['last_activity'] = time();
-        header("Location: backoffice.php");
-        exit;
+    if ($username && $password) {
+        try {
+            // Préparer et exécuter la requête pour vérifier les identifiants
+            $stmt = $pdo->prepare("SELECT * FROM personnel WHERE login = :login");
+            $stmt->execute(['login' => $username]);
+            $user = $stmt->fetch();
+
+            if ($user && $password === $user['mot_de_passe']) {
+                $_SESSION['user'] = $username;
+                $_SESSION['last_activity'] = time();
+                header("Location: backoffice.php");
+                exit;
+            } else {
+                $error = "Nom d'utilisateur ou mot de passe incorrect.";
+            }
+        } catch (PDOException $e) {
+            $error = "Erreur de connexion à la base de données : " . $e->getMessage();
+        }
     } else {
-        $error = "Nom d'utilisateur ou mot de passe incorrect.";
+        $error = "Veuillez remplir tous les champs.";
     }
 }
 
