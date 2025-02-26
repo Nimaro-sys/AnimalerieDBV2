@@ -1,6 +1,6 @@
 <?php
 require_once ('include/config.php');
-require_once (dirname(__DIR__,1).'/model/Cage.php');
+require_once (dirname(__DIR__,1).'./gestion_cage.php');
 // Récupérer toutes les cages
 $cage = new Cage;
 $allCages = $cage->getAllCages();
@@ -14,7 +14,7 @@ require_once ('include/header.php');
             <thead class="thead-dark">
                 <tr>
                     <th>numero</th>
-                    <th>alle</th>
+                    <th>allee</th>
                     <th>salle</th>
                 </tr>
             </thead>
