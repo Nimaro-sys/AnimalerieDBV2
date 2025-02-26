@@ -69,7 +69,6 @@
     font-weight: 600;
     padding: 8px 12px;
     border-radius: 8px; /* Ajoute un arrondi léger */
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
     margin-bottom: 10px; /* Espace entre les éléments */
 }
 
@@ -93,14 +92,6 @@
 
 .main-content {
     padding: 20px;
-}
-
-h2 {
-    font-size: 2rem;
-    font-family: 'Poppins'
-    text-align: center; /* Centrer le texte */
-    color:rgb(255, 255, 255);
-    padding: 20px; /* Ajouter un peu de remplissage autour du titre */
 }
 
 /* Responsive pour les petits écrans */
@@ -154,9 +145,7 @@ h2 {
                                     </li>
 
         <!-- Section Personnel -->
-                <li class="nav-item"><a class="nav-link <?= ($type == 'VET') ? 'active' : '' ?>" href="personnel.php?role=VET">Vétérinaires</a></li>
-                <li class="nav-item"><a class="nav-link <?= ($type == 'BEN') ? 'active' : '' ?>" href="personnel.php?role=BEN">Bénévoles</a></li>
-                <li class="nav-item"><a class="nav-link <?= ($type == 'ADM') ? 'active' : '' ?>" href="personnel.php?role=ADM">Administrateurs</a></li>
+                <li class="nav-item"><a class="nav-link" href="personnel.php">Personnel</a></li>
     </ul>
             </ul>
         </div>

@@ -1,40 +1,44 @@
 <?php
-
-require_once ('include/config.php');
-
-require_once (dirname(__DIR__,1).'/model/Personnel.php');
-// Récupérer tous les personnels
-$personnel = new Personnel;
-$listPersonnel = $personnel->getAllPersonnel();
-require_once ('include/header.php');
+session_start();
+include_once ('include/config.php');
 ?>
 
-<div class="container mt-4">
-    <h2 class="mb-4">Liste des Personnel</h2>
+<!-- HEADER avec Menu Burger -->
+<?php include_once ('include/header.php'); ?>
 
-    <!-- Create a table with Bootstrap classes -->
-    <table class="table table-bordered table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th>nom</th>
-                <th>prénom</th>
-                <th>poste</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            foreach ($listPersonnel as $personne) {
-                // Create a link to the employee profile page
-                echo "<tr>";
-                echo "<td><a href='?page=dashboard&table=employe&id=" . $personne['id_personnel'] . "'>" . htmlspecialchars($personne['nom']) . "</a></td>";
-                echo "<td>" . htmlspecialchars($personne['prenom']) . "</td>";
-                echo "<td>" . htmlspecialchars($personne['poste']) . "</td>";
-                echo "</tr>";
-            }
+<!-- Contenu principal : Affichage des membres du personnel -->
+<main class="container mt-5">
+    <h2 class="mb-4 text-center">Membres du Personnel</h2>
+
+    <div class="row">
+        <?php
+        $sql = "SELECT * FROM personnel";
+        $stmt = $pdo->query($sql);
+        $personnel = $stmt->fetchAll();
+
+        foreach ($personnel as $person) {
             ?>
-        </tbody>
-    </table>
-    <button class="btn btn-success" data-toggle="modal" data-target="#addUserModal">Ajouter Employé</button>
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $person['prenom'] . ' ' . $person['nom']; ?></h5>
+                        <p class="card-text">
+                            <strong>Poste :</strong> <?php echo $person['poste']; ?><br>
+                            <strong>Login :</strong> <?php echo $person['login']; ?><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+    </div>
+</main>
 
-</div>
-<?php require_once ('include/footer.php'); ?>
+<!-- FOOTER -->
+<?php include_once './include/footer.php'; ?>
+<script src="JS/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
