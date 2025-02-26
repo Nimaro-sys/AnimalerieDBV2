@@ -59,3 +59,14 @@ include_once 'include/header.php';
 <?php 
 include_once 'include/footer.php'; 
 ?>
+
+<style>
+    label {
+        color: white;
+    }
+    input {
+        color: white;
+        background-color: #333;
+        border: 1px solid #555;
+    }
+</style>
