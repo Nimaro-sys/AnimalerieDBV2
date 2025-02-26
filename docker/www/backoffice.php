@@ -61,6 +61,8 @@ if (isset($_GET['supprimer'])) {
                       </tr>";
             }
             ?>
+        </tbody>
+    </table>
 
     <h3>Liste du personel</h3>
     <table class="table table-bordered">
@@ -86,6 +88,8 @@ if (isset($_GET['supprimer'])) {
                       </tr>";
             }
         ?>
+        </tbody>
+    </table>
 
         <h3> Liste des cages </h3>
         <table class="table table-bordered">
