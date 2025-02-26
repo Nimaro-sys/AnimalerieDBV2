@@ -39,9 +39,9 @@ require_once 'include/header.php';
         <div class="mb-3">
             <label for="poste" class="form-label">Poste</label>
             <select class="form-control" id="poste" name="poste" required>
-                <option value="Cadre">Cadre</option>
+                <option value="cadre">Cadre</option>
                 <option value="Soigneur">Soigneur</option>
-                <option value="Administrateur">Administrateur</option>
+                <option value="administratif">Admin</option>
             </select>
         </div>
         <div class="mb-3">

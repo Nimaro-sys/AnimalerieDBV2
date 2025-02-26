@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($user && $password === $user['mot_de_passe']) {
                 $_SESSION['user'] = $username;
+                $_SESSION['username'] = $user['prenom'];
                 $_SESSION['last_activity'] = time();
                 header("Location: backoffice.php");
                 exit;
