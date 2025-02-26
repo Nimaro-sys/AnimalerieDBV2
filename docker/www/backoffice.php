@@ -30,21 +30,10 @@ if (isset($_GET['supprimer'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backoffice</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
-
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['user']; ?>!</h2>
     <a href="index.php" class="btn btn-danger">Déconnexion</a>
-
-
+    <hr>
     <h3>Liste des animaux</h3>
     <table class="table table-bordered">
         <thead>
@@ -52,7 +41,6 @@ if (isset($_GET['supprimer'])) {
                 <th>Nom</th>
                 <th>Sexe</th>
                 <th>Pays d'origine</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -63,7 +51,6 @@ if (isset($_GET['supprimer'])) {
                         <td>{$animal['nom']}</td>
                         <td>{$animal['genre']}</td>
                         <td>{$animal['pays']}</td>
-                        <td><a href='?supprimer={$animal['id']}' class='btn btn-danger btn-sm' onclick='return confirm("Êtes-vous sûr de vouloir supprimer cet animal ?");'>Supprimer</a></td>
                       </tr>";
             }
             ?>
