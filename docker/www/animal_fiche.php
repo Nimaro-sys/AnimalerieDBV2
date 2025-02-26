@@ -23,8 +23,8 @@ require_once ('include/header.php');
                     <p class="card-text">
                         <strong>Sexe :</strong> <?php echo $animal['genre']; ?><br>
                         <strong>Numéro d'identification :</strong> <?php echo $animal['numero']; ?><br>
-                        <strong> date arrivée:</strong> <?php echo $animal['date_arrivee']; ?><br>
-                        <strong>date de décès:</strong> <?php 
+                        <strong>Date d'arrivée :</strong> <?php echo $animal['date_arrivee']; ?><br>
+                        <strong>Date de décès :</strong> <?php 
                         // si la date de décès est vide mettre N/A
                         if ($animal['date_deces'] == NULL) {
                             echo "N/A";
@@ -34,9 +34,9 @@ require_once ('include/header.php');
                         <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
                         <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                     </p>
-                    <button type="button" class="btn btn-success w-100">
+                    <a href="adoption_form.php?animal_id=<?php echo $animal['id_animal']; ?>" class="btn btn-success w-100">
                         Adopter
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
