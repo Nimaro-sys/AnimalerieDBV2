@@ -63,8 +63,9 @@ if (isset($_GET['supprimer'])) {
             ?>
         </tbody>
     </table>
+    <a href="ajouter_animal.php" class="btn btn-primary">Ajouter un Animal</a>
 
-    <h3>Liste du personel</h3>
+    <h3>Liste du personnel</h3>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -75,8 +76,8 @@ if (isset($_GET['supprimer'])) {
                 <th>mot de passe</th>
             </tr>
         </thead>
-
-        <?php  
+        <tbody>
+            <?php  
             $stmt = $pdo->query("SELECT * FROM personnel");
             while ($personnel = $stmt->fetch()) {
                 echo "<tr>
@@ -87,22 +88,22 @@ if (isset($_GET['supprimer'])) {
                         <td>{$personnel['mot_de_passe']}</td>
                       </tr>";
             }
-        ?>
+            ?>
         </tbody>
     </table>
+    <a href="ajouter_personnel.php" class="btn btn-primary">Ajouter un Membre du Personnel</a>
 
-        <h3> Liste des cages </h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Salle</th>
-                    <th>Alle</th>
-                    <th>Numéro</th>
-                </tr>
-            </thead>
-        </tbody>
-
-        <?php
+    <h3>Liste des cages</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Salle</th>
+                <th>Allée</th>
+                <th>Numéro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
             $stmt = $pdo->query("SELECT * FROM cage");
             while ($cage = $stmt->fetch()) {
                 echo "<tr>
@@ -111,12 +112,11 @@ if (isset($_GET['supprimer'])) {
                         <td>{$cage['numero']}</td>
                       </tr>";
             }
-        ?>
-        </div>
-    </tbody>
-</table>
-
-<br>
+            ?>
+        </tbody>
+    </table>
+    <a href="ajouter_cage.php" class="btn btn-primary">Ajouter une Cage</a>
+</div>
 
 <?php
 require_once 'include/footer.php';
