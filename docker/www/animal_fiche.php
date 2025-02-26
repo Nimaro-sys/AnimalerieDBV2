@@ -34,7 +34,7 @@ require_once ('include/header.php');
                         <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                     </p>
                     <button type="button" class="btn btn-success w-100">
-                        adopter
+                        Adopter
                     </button>
                 </div>
             </div>
