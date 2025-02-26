@@ -33,7 +33,7 @@ require_once ('include/header.php');
                         <strong>Pays d'origine :</strong> <?php echo $animal['pays']; ?><br>
                         <strong>Histoire :</strong> <?php echo $animal['historique']; ?>
                     </p>
-                    <button type="button" class="btn btn-primary w-100">
+                    <button type="button" class="btn btn-success w-100">
                         adopter
                     </button>
                 </div>
