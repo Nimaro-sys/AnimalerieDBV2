@@ -94,6 +94,14 @@
     padding: 20px;
 }
 
+h2 {
+    color: white;
+    font-family: 'Poppins', sans-serif; /* Police élégante */
+    font-weight: 600; /* Un peu plus épais mais pas trop */
+    text-shadow: 2px 2px 10px rgba(20, 0, 0, 0.5); /* Effet lumineux subtil */
+}
+
+
 /* Responsive pour les petits écrans */
 @media (max-width: 768px) {
     .container {
