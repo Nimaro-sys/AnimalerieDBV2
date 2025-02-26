@@ -44,7 +44,7 @@
     left: 0;
     top: 0;
     height: 100vh; /* Pleine hauteur */
-    width: 200px; /* Réduit la largeur pour un design plus compact */
+    width: 190px; /* Réduit la largeur pour un design plus compact */
     background-color: #212529; /* Noir léger */
     padding: 20px 10px;
     display: flex;
