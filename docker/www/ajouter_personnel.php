@@ -8,15 +8,15 @@ if (!isset($_SESSION['user'])) {
 require_once 'include/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
-    $genre = $_POST['genre'];
-    $numero = $_POST['numero'];
-    $pays = $_POST['pays'];
-    $image = $_POST['image'];
+    $poste = $_POST['poste'];
+    $login = $_POST['login'];
+    $mot_de_passe = $_POST['mot_de_passe'];
 
-    if (!empty($nom) && !empty($genre) && !empty($numero) && !empty($pays) && !empty($image)) {
-        $stmt = $pdo->prepare("INSERT INTO animal (nom, genre, numero, pays, image) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([$nom, $genre, $numero, $pays, $image]);
+    if (!empty($prenom) && !empty($nom) && !empty($poste) && !empty($login) && !empty($mot_de_passe)) {
+        $stmt = $pdo->prepare("INSERT INTO personnel (prenom, nom, poste, login, mot_de_passe) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$prenom, $nom, $poste, $login, $mot_de_passe]);
         header("Location: backoffice.php");
         exit;
     }
@@ -26,27 +26,31 @@ require_once 'include/header.php';
 ?>
 
 <div class="container mt-5">
-    <h2>Ajouter un Animal</h2>
+    <h2>Ajouter un Membre du Personnel</h2>
     <form method="POST">
+        <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="prenom" name="prenom" required>
+        </div>
         <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
             <input type="text" class="form-control" id="nom" name="nom" required>
         </div>
         <div class="mb-3">
-            <label for="genre" class="form-label">Genre</label>
-            <input type="text" class="form-control" id="genre" name="genre" required>
+            <label for="poste" class="form-label">Poste</label>
+            <select class="form-control" id="poste" name="poste" required>
+                <option value="Cadre">Cadre</option>
+                <option value="Soigneur">Soigneur</option>
+                <option value="Administrateur">Administrateur</option>
+            </select>
         </div>
         <div class="mb-3">
-            <label for="numero" class="form-label">Numéro d'identification</label>
-            <input type="text" class="form-control" id="numero" name="numero" required>
+            <label for="login" class="form-label">Login</label>
+            <input type="text" class="form-control" id="login" name="login" required>
         </div>
         <div class="mb-3">
-            <label for="pays" class="form-label">Pays d'origine</label>
-            <input type="text" class="form-control" id="pays" name="pays" required>
-        </div>
-        <div class="mb-3">
-            <label for="image" class="form-label">Image</label>
-            <input type="text" class="form-control" id="image" name="image" required>
+            <label for="mot_de_passe" class="form-label">Mot de Passe</label>
+            <input type="password" class="form-control" id="mot_de_passe" name="mot_de_passe" required>
         </div>
         <button type="submit" class="btn btn-primary">Ajouter</button>
     </form>

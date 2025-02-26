@@ -12,11 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $genre = $_POST['genre'];
     $numero = $_POST['numero'];
     $pays = $_POST['pays'];
+    $date_naissance = $_POST['date_naissance'];
+    $date_arrivee = $_POST['date_arrivee'];
+    $historique = $_POST['Historique'];
     $image = $_POST['image'];
 
-    if (!empty($nom) && !empty($genre) && !empty($numero) && !empty($pays) && !empty($image)) {
-        $stmt = $pdo->prepare("INSERT INTO animal (nom, genre, numero, pays, image) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([$nom, $genre, $numero, $pays, $image]);
+    if (!empty($nom) && !empty($genre) && !empty($numero) && !empty($pays) && !empty($date_naissance) && !empty($date_arrivee) && !empty($historique) && !empty($image)) {
+        $stmt = $pdo->prepare("INSERT INTO animal (nom, genre, numero, pays, date_naissance, date_arrivee, historique, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$nom, $genre, $numero, $pays, $date_naissance, $date_arrivee, $historique, $image]);
         header("Location: backoffice.php");
         exit;
     }
@@ -43,6 +46,18 @@ require_once 'include/header.php';
         <div class="mb-3">
             <label for="pays" class="form-label">Pays d'origine</label>
             <input type="text" class="form-control" id="pays" name="pays" required>
+        </div>
+        <div class="mb-3">
+            <label for="date_naissance" class="form-label">Date de naissance</label>
+            <input type="date" class="form-control" id="date_naissance" name="date_naissance" required>
+        </div>
+        <div class="mb-3">
+            <label for="date_arrivee" class="form-label">Date d'arrivée</label>
+            <input type="date" class="form-control" id="date_arrivee" name="date_arrivee" required>
+        </div>
+        <div class="mb-3">
+            <label for="Historique" class="form-label">Historique</label>
+            <input type="text" class="form-control" id="Historique" name="Historique" required>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image</label>

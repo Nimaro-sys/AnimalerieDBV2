@@ -8,6 +8,7 @@ body {
   background-attachment: fixed;
 }
 
+form { margin: 0 auto; max-width: 400px; padding: 15px; background-color: beige; border-radius: 2px; }
 
 .sidebar { height: 100vh; overflow-y: auto; }
 
