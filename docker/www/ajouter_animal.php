@@ -37,7 +37,10 @@ require_once 'include/header.php';
         </div>
         <div class="mb-3">
             <label for="genre" class="form-label">Genre</label>
-            <input type="text" class="form-control" id="genre" name="genre" required>
+            <select class="form-control" id="genre" name="genre" required>
+                <option value="M">Mâle</option>
+                <option value="F">Femelle</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="numero" class="form-label">Numéro d'identification</label>
