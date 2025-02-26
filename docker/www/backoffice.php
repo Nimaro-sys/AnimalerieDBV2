@@ -7,8 +7,6 @@ if (!isset($_SESSION['user'])) {
 
 require_once 'include/config.php';
 
-require_once 'include/header.php';
-
 // Ajout d'un animal
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
     $nom = $_POST['nom'];
@@ -22,13 +20,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
 }
 
 // Suppression d'un animal
-if (isset($_GET['supprimer'])) {
-    $id = $_GET['supprimer'];
-    $stmt = $pdo->prepare("DELETE FROM animal WHERE id = ?");
+if (isset($_GET['supprimer_animal'])) {
+    $id = $_GET['supprimer_animal'];
+    $stmt = $pdo->prepare("DELETE FROM animal WHERE id_animal = ?");
     $stmt->execute([$id]);
     header("Location: backoffice.php");
     exit;
 }
+
+// Suppression d'un membre du personnel
+if (isset($_GET['supprimer_personnel'])) {
+    $id = $_GET['supprimer_personnel'];
+    $stmt = $pdo->prepare("DELETE FROM personnel WHERE id_personnel = ?");
+    $stmt->execute([$id]);
+    header("Location: backoffice.php");
+    exit;
+}
+
+// Suppression d'une cage
+if (isset($_GET['supprimer_cage'])) {
+    $id = $_GET['supprimer_cage'];
+    $stmt = $pdo->prepare("DELETE FROM cage WHERE id_cage = ?");
+    $stmt->execute([$id]);
+    header("Location: backoffice.php");
+    exit;
+}
+
+
+require_once 'include/header.php';
+
 ?>
 
 <div class="container mt-5">
@@ -61,10 +81,10 @@ if (isset($_GET['supprimer'])) {
                         <td>{$animal['pays']}</td>
                         <td>{$animal['image']}</td>
                         <td>
-                            <a href='backoffice.php?modifier={$animal['id_animal']}' class='btn btn-primary'>Modifier</a>
+                            <a href='#' class='btn btn-primary'>Modifier</a>
                         </td>
                         <td>
-                            <a href='backoffice.php?supprimer={$animal['id_animal']}' class='btn btn-danger'>Supprimer</a>
+                            <a href='backoffice.php?supprimer_animal={$animal['id_animal']}' class='btn btn-danger'>Supprimer</a>
                         </td>
                       </tr>";
             }
@@ -80,8 +100,8 @@ if (isset($_GET['supprimer'])) {
                 <th>Prenom</th>
                 <th>Nom</th>
                 <th>Poste</th>
-                <th>login</th>
-                <th>mot de passe</th>
+                <th>Login</th>
+                <th>Mot de passe</th>
                 <th>Modifier</th>
                 <th>Supprimer</th>
             </tr>
@@ -97,10 +117,10 @@ if (isset($_GET['supprimer'])) {
                         <td>{$personnel['login']}</td>
                         <td>{$personnel['mot_de_passe']}</td>
                         <td>
-                            <a href='backoffice.php?modifier={$personnel['id']}' class='btn btn-primary'>Modifier</a>
+                            <a href='#' class='btn btn-primary'>Modifier</a>
                         </td>
                         <td>
-                            <a href='backoffice.php?supprimer={$personnel['id']}' class='btn btn-danger'>Supprimer</a>
+                            <a href='backoffice.php?supprimer_personnel={$personnel['id_personnel']}' class='btn btn-danger'>Supprimer</a>
                         </td>
                       </tr>";
             }
@@ -129,10 +149,10 @@ if (isset($_GET['supprimer'])) {
                         <td>{$cage['allee']}</td>
                         <td>{$cage['numero']}</td>
                         <td>
-                            <a href='backoffice.php?modifier={$cage['id']}' class='btn btn-primary'>Modifier</a>
+                            <a href='#' class='btn btn-primary'>Modifier</a>
                         </td>
                         <td>
-                            <a href='backoffice.php?supprimer={$cage['id']}' class='btn btn-danger'>Supprimer</a>
+                            <a href='backoffice.php?supprimer_cage={$cage['id_cage']}' class='btn btn-danger'>Supprimer</a>
                         </td>
                       </tr>";
             }
