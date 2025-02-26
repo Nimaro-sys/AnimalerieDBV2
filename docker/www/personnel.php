@@ -11,27 +11,35 @@ include_once ('include/config.php');
     <h2 class="mb-4 text-center">Membres du Personnel</h2>
 
     <div class="row">
-        <?php
-        $sql = "SELECT * FROM personnel";
-        $stmt = $pdo->query($sql);
-        $personnel = $stmt->fetchAll();
+    <?php
+$sql = "SELECT * FROM personnel";
+$stmt = $pdo->query($sql);
+$personnel = $stmt->fetchAll();
 
-        foreach ($personnel as $person) {
-            ?>
-            <div class="col-md-4 mb-4">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $person['prenom'] . ' ' . $person['nom']; ?></h5>
-                        <p class="card-text">
-                            <strong>Poste :</strong> <?php echo $person['poste']; ?><br>
-                            <strong>Login :</strong> <?php echo $person['login']; ?><br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
-        ?>
+foreach ($personnel as $person) {
+?>
+   <div class="col-md-4 mb-4">
+    <div class="card" style="width: 18rem;">
+        <!-- Image du personnel -->
+        <img src="<?php echo !empty($person['image']) ? './images/personnel/' . $person['image'] : './images/personnel/default.jpg'; ?>" 
+             class="card-img-top" 
+             alt="Image de <?php echo htmlspecialchars($person['nom']); ?>" 
+             style="object-fit: cover; height: 300px; width: 100%;">
+
+        <div class="card-body">
+            <h5 class="card-title"><?php echo htmlspecialchars($person['prenom']) . ' ' . htmlspecialchars($person['nom']); ?></h5>
+            <p class="card-text">
+                <strong>Poste :</strong> <?php echo htmlspecialchars($person['poste']); ?><br>
+                <strong>Login :</strong> <?php echo htmlspecialchars($person['login']); ?><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<?php 
+}
+?>
+
     </div>
 </main>
 

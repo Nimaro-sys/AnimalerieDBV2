@@ -16,7 +16,8 @@ require_once ('include/header.php');
         <div class="col-md-6 mb-4">
             <div class="card shadow-sm" style="width: 100%;">
                 <!-- Image dynamique de l'animal -->
-                <img src="<?php echo './images/animal/' . $animal['image']; ?>" class="card-img-top" alt="Image de <?php echo $animal['nom']; ?>" style="object-fit: cover; height: 300px;">
+                <img src="<?php echo './images/animal/' . $animal['image']; ?>" 
+                    class="card-img-top" alt="Image de <?php echo $animal['nom']; ?>" style="object-fit: cover; height: 300px;">
                 <div class="card-body">
                     <h5 class="card-title text-center"><?php echo $animal['nom']; ?></h5>
                     <p class="card-text">
