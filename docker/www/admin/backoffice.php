@@ -61,7 +61,7 @@ require_once '../include/header.php';
 
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['username']; ?>!</h2>
-    <a href="login.php" class="btn btn-danger">Déconnexion</a>
+    <a href="../logout.php" class="btn btn-danger">Déconnexion</a>
 
     <h3>Liste des animaux</h3>
     <table class="table table-bordered">
