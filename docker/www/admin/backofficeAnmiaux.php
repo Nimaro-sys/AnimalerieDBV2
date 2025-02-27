@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
     }
 }
 
-// Suppression d'un animal
+
 if (isset($_GET['supprimer_animal'])) {
     $id = $_GET['supprimer_animal'];
     $stmt = $pdo->prepare("DELETE FROM animal WHERE id_animal = ?");
