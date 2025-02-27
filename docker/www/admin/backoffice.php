@@ -51,9 +51,14 @@ require_once '../include/header.php';
 
 ?>
 
-<a href="backofficeEmploye.php"> Employés </a>
-<a href="backofficeCages.php"> Cages </a>
-<a href='backofficeAnmiaux.php'>test backoffice Animaux</a>
+<!-- Boutons page backoffice-->
+
+<div class="container mt-5">
+    <a href="backofficeAnmiaux.php" class="btn btn-primary">animaux</a>
+    <a href="backofficeCage.php" class="btn btn-primary">Cages</a>
+    <a href="backofficeEmploye.php" class="btn btn-primary">Personnel</a>
+</div>
+
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['username']; ?>!</h2>
     <a href="login.php" class="btn btn-danger">Déconnexion</a>
