@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
+    header("Location: ./login.php");
     exit;
 }
 
@@ -53,6 +53,7 @@ require_once '../include/header.php';
 
 <a href="backofficeEmploye.php"> Employés </a>
 
+<a href='backofficeAnmiaux.php'>test backoffice A</a>
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['username']; ?>!</h2>
     <a href="login.php" class="btn btn-danger">Déconnexion</a>
@@ -156,7 +157,7 @@ require_once '../include/header.php';
                         <td>
                             <a href='backoffice.php?supprimer_cage={$cage['id_cage']}' class='btn btn-danger'>Supprimer</a>
                         </td>
-                      </tr>";
+                    </tr>";
             }
             ?>
         </tbody>

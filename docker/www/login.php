@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user'] = $username;
                 $_SESSION['username'] = $user['prenom'];
                 $_SESSION['last_activity'] = time();
-                header("Location: backoffice.php");
+                header("Location: ./admin/backoffice.php");
                 exit;
             } else {
                 $error = "Nom d'utilisateur ou mot de passe incorrect.";
