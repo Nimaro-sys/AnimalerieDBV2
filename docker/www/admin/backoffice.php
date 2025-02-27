@@ -159,7 +159,7 @@ require_once '../include/header.php';
                         <td>{$cage['allee']}</td>
                         <td>{$cage['numero']}</td>
                         <td>
-                            <a href='modifier_cage.php' class='btn btn-primary'>Modifier</a>
+                            <a href='selectionner_cage.php' class='btn btn-primary'>Modifier</a>
                         </td>
                         <td>
                             <a href='backoffice.php?supprimer_cage={$cage['id_cage']}' class='btn btn-danger'>Supprimer</a>
