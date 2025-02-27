@@ -5,7 +5,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-require_once 'include/config.php';
+require_once '../include/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = $_POST['nom'];
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require_once 'include/header.php';
+require_once '../include/header.php';
 ?>
 
 <div class="container mt-5">
@@ -71,5 +71,5 @@ require_once 'include/header.php';
 </div>
 
 <?php
-require_once 'include/footer.php';
+require_once '../include/footer.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'include/config.php';
+include_once './include/config.php';
 
 $error = "";
 
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user'] = $username;
                 $_SESSION['username'] = $user['prenom'];
                 $_SESSION['last_activity'] = time();
-                header("Location: backoffice.php");
+                header("Location: ./admin/backoffice.php");
                 exit;
             } else {
                 $error = "Nom d'utilisateur ou mot de passe incorrect.";
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include_once 'include/header.php';
+include_once './include/header.php';
 ?>
 
 <body>
@@ -58,7 +58,7 @@ include_once 'include/header.php';
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <?php 
-include_once 'include/footer.php'; 
+include_once './include/footer.php'; 
 ?>
 
 <style>
