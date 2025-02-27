@@ -25,6 +25,7 @@ require_once '../include/header.php';
 
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['username']; ?>!</h2>
+    <a href="ajouter_cage.php" class="btn btn-primary">Ajouter une Cage</a>
     <a href="login.php" class="btn btn-danger">Déconnexion</a>
 
    
@@ -40,25 +41,25 @@ require_once '../include/header.php';
             </tr>
         </thead>
         <tbody>
-            <?php
+        <?php
             $stmt = $pdo->query("SELECT * FROM cage");
             while ($cage = $stmt->fetch()) {
-                echo "<tr>
+                echo "<tr id='cage-{$cage['id_cage']}'>
                         <td>{$cage['salle']}</td>
                         <td>{$cage['allee']}</td>
                         <td>{$cage['numero']}</td>
                         <td>
-                            <a href='#' class='btn btn-primary'>Modifier</a>
+                            <a href='modifier_cage.php?id={$cage['id_cage']}' class='btn btn-primary'>Modifier</a>
                         </td>
                         <td>
-                            <a href='backoffice.php?supprimer_cage={$cage['id_cage']}' class='btn btn-danger'>Supprimer</a>
+                            <button onclick='supprimerCage({$cage['id_cage']})' class='btn btn-danger'>Supprimer</button>
                         </td>
-                      </tr>";
+                    </tr>";
             }
-            ?>
-        </tbody>
+?>
+</tbody>
     </table>
-    <a href="ajouter_cage.php" class="btn btn-primary">Ajouter une Cage</a>
+    
 </div>
 
 <?php

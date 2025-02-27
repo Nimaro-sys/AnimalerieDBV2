@@ -50,7 +50,6 @@ if (isset($_GET['supprimer_cage'])) {
 require_once '../include/header.php';
 
 ?>
-<a href="backofficeCage.php"class="btn btn-danger">ajouter une cage</a>
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['username']; ?>!</h2>
     <a href="login.php" class="btn btn-danger">Déconnexion</a>
@@ -131,6 +130,8 @@ require_once '../include/header.php';
 
     <h3>Liste des cages</h3>
     <table class="table table-bordered">
+        
+        <a href="ajouter_cage.php"class="btn btn-danger">ajouter une cage</a>
         <thead>
             <tr>
                 <th>Salle</th>
@@ -149,7 +150,7 @@ require_once '../include/header.php';
                         <td>{$cage['allee']}</td>
                         <td>{$cage['numero']}</td>
                         <td>
-                            <a href='#' class='btn btn-primary'>Modifier</a>
+                            <a href='modifier_cage.php' class='btn btn-primary'>Modifier</a>
                         </td>
                         <td>
                             <a href='backoffice.php?supprimer_cage={$cage['id_cage']}' class='btn btn-danger'>Supprimer</a>
@@ -159,7 +160,6 @@ require_once '../include/header.php';
             ?>
         </tbody>
     </table>
-    <a href="ajouter_cage.php" class="btn btn-primary">Ajouter une Cage</a>
 </div>
 
 <?php
