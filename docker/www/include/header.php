@@ -81,7 +81,6 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link me-3" href="index.php">Animaux</a></li>
-                    <li class="nav-item"><a class="nav-link me-3" href="cage.php">Cages</a></li>
                     <li class="nav-item"><a class="nav-link me-3" href="personnel.php">Personnel</a></li>
                 </ul>
 
