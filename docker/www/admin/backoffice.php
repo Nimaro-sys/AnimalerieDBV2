@@ -5,7 +5,35 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-require_once 'include/config.php';
+require_once '../include/config.php';
+
+// Modification d'un animal
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['modifier'])) {
+    $id = $_POST['id'];
+    $nom = $_POST['nom'];
+    $genre = $_POST['genre'];
+    $numero = $_POST['numero'];
+    $pays = $_POST['pays'];
+    $date_naissance = $_POST['date_naissance'];
+    $date_arrivee = $_POST['date_arrivee'];
+    $historique = $_POST['historique'];
+    $image = $_POST['image'];
+
+    if (!empty($nom) && !empty($genre) && !empty($numero) && !empty($pays) && !empty($date_naissance) && !empty($date_arrivee) && !empty($historique) && !empty($image)) {
+        $stmt = $pdo->prepare("UPDATE animal SET nom = ?, genre = ?, numero = ?, pays = ?, date_naissance = ?, date_arrivee = ?, historique = ?, image = ? WHERE id_animal = ?");
+        $stmt->execute([$nom, $genre, $numero, $pays, $date_naissance, $date_arrivee, $historique, $image, $id]);
+        header("Location: backoffice.php");
+        exit;
+    }
+} else {
+    $stmt = $pdo->prepare("SELECT * FROM animal WHERE id_animal = ?");
+    $stmt->execute([$_GET['modifier_animal']]);
+    $animal = $stmt->fetch();
+    if (!$animal) {
+        header("Location: backoffice.php");
+        exit;
+    }
+}
 
 // Ajout d'un animal
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
@@ -47,7 +75,7 @@ if (isset($_GET['supprimer_cage'])) {
 }
 
 
-require_once 'include/header.php';
+require_once '../include/header.php';
 
 ?>
 
@@ -81,7 +109,7 @@ require_once 'include/header.php';
                         <td>{$animal['pays']}</td>
                         <td>{$animal['image']}</td>
                         <td>
-                            <a href='#' class='btn btn-primary'>Modifier</a>
+                            <a href='modifier_animal.php?modifier_animal={$animal['id_animal']}' class='btn btn-primary'>Modifier</a>
                         </td>
                         <td>
                             <a href='backoffice.php?supprimer_animal={$animal['id_animal']}' class='btn btn-danger'>Supprimer</a>
@@ -163,5 +191,5 @@ require_once 'include/header.php';
 </div>
 
 <?php
-require_once 'include/footer.php';
+require_once '../include/footer.php';
 ?>
