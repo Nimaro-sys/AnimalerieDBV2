@@ -1,11 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }
 
-require_once 'include/config.php';
+require_once '../include/config.php';
 
 // Ajout d'un animal
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['ajouter'])) {
@@ -47,10 +47,10 @@ if (isset($_GET['supprimer_cage'])) {
 }
 
 
-require_once 'include/header.php';
+require_once '../include/header.php';
 
 ?>
-
+<a href="backofficeCage.php"class="btn btn-danger">ajouter une cage</a>
 <div class="container mt-5">
     <h2>Bienvenue, <?php echo $_SESSION['username']; ?>!</h2>
     <a href="login.php" class="btn btn-danger">Déconnexion</a>
@@ -163,5 +163,5 @@ require_once 'include/header.php';
 </div>
 
 <?php
-require_once 'include/footer.php';
+require_once '../include/footer.php';
 ?>
