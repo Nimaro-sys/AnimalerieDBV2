@@ -10,7 +10,8 @@ if (!isset($_GET['id'])) {
 $id_cage = $_GET['id'];
 
 try {
-    $stmt = $pdo->prepare("UPDATE cage SET deleted_at = NOW() WHERE id_cage = ?");
+    $stmt = $pdo->prepare("UPDATE animal SET id_cage = NULL WHERE id_cage = ?;
+                            DELETE FROM cage WHERE id_cage = ?;");
     $stmt->execute([$id_cage]);
     echo json_encode(['success' => true]);
 } catch (PDOException $e) {
