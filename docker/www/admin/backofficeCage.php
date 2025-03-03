@@ -58,7 +58,7 @@ require_once '../include/headerAdmin.php';
                             <a href='modifier_cage.php?id={$cage['id_cage']}' class='btn btn-primary'>✏</a>
                         </td>
                         <td>
-                            <button onclick='supprimerCage({$cage['id_cage']})' class='btn btn-danger'>➖</button>
+                            <a href='supprimer_cage.php?id={$cage['id_cage']}' class='btn btn-danger'>➖</a>
                         </td>
                     </tr>";
             }

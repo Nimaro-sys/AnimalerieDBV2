@@ -21,7 +21,7 @@ foreach ($personnel as $person) {
    <div class="col-md-4 mb-4">
     <div class="card" style="width: 18rem;">
         <!-- Image du personnel -->
-        <img src="<?php echo !empty($person['image']) ? './images/personnel/' . $person['image'] : './images/personnel/default.jpg'; ?>" 
+        <img src="<?php echo  './images/personnel/staff.png'; ?>" 
              class="card-img-top" 
              alt="Image de <?php echo htmlspecialchars($person['nom']); ?>" 
              style="object-fit: cover; height: 300px; width: 100%;">
