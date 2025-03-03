@@ -16,8 +16,14 @@ if (isset($_GET['supprimer_personnel'])) {
     exit;
 }
 require_once '../include/header.php';
-
 ?>
+<!-- Boutons page backoffice-->
+
+<div class="container mt-5">
+    <a href="backofficeAnmiaux.php" class="btn btn-primary">animaux</a>
+    <a href="backofficeCage.php" class="btn btn-primary">Cages</a>
+    <a href="backofficeEmploye.php" class="btn btn-primary">Personnel</a>
+</div>
 
 <h3>Liste du personnel</h3>
     <table class="table table-bordered">
