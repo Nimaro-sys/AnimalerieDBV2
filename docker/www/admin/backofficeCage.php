@@ -49,10 +49,10 @@ require_once '../include/header.php';
                         <td>{$cage['allee']}</td>
                         <td>{$cage['numero']}</td>
                         <td>
-                            <a href='modifier_cage.php?id={$cage['id_cage']}' class='btn btn-primary'>Modifier</a>
+                            <a href='modifier_cage.php?id={$cage['id_cage']}' class='btn btn-primary'>✏</a>
                         </td>
                         <td>
-                            <button onclick='supprimerCage({$cage['id_cage']})' class='btn btn-danger'>Supprimer</button>
+                            <button onclick='supprimerCage({$cage['id_cage']})' class='btn btn-danger'>➖</button>
                         </td>
                     </tr>";
             }

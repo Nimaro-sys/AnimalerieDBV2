@@ -52,7 +52,7 @@ require_once '../include/header.php';
             <label for="mot_de_passe" class="form-label">Mot de Passe</label>
             <input type="password" class="form-control" id="mot_de_passe" name="mot_de_passe" required>
         </div>
-        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="submit" class="btn btn-primary">➕</button>
     </form>
 </div>
 

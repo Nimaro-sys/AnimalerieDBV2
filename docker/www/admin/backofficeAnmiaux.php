@@ -62,17 +62,17 @@ require_once '../include/header.php';
                         <td>{$animal['pays']}</td>
                         <td>{$animal['image']}</td>
                         <td>
-                            <a href='#' class='btn btn-primary'>Modifier</a>
+                            <a href='#' class='btn btn-primary'>✏</a>
                         </td>
                         <td>
-                            <a href='backoffice.php?supprimer_animal={$animal['id_animal']}' class='btn btn-danger'>Supprimer</a>
+                            <a href='backoffice.php?supprimer_animal={$animal['id_animal']}' class='btn btn-danger'>➖</a>
                         </td>
                     </tr>";
             }
             ?>
         </tbody>
     </table>
-    <a href="ajouter_animal.php" class="btn btn-primary">Ajouter un Animal</a>
+    <a href="ajouter_animal.php" class="btn btn-primary">➕</a>
 
     <?php
 require_once '../include/footer.php';

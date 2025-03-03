@@ -38,7 +38,7 @@ require_once '../include/header.php';
             <label for="numero" class="form-label">Numéro</label>
             <input type="text" class="form-control" id="numero" name="numero" required>
         </div>
-        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="submit" class="btn btn-primary">➕</button>
     </form>
 </div>
 

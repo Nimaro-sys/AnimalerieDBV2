@@ -43,17 +43,17 @@ require_once '../include/header.php';
                         <td>{$personnel['login']}</td>
                         <td>{$personnel['mot_de_passe']}</td>
                         <td>
-                            <a href='#' class='btn btn-primary'>Modifier</a>
+                            <a href='#' class='btn btn-primary'>✏</a>
                         </td>
                         <td>
-                            <a href='backoffice.php?supprimer_personnel={$personnel['id_personnel']}' class='btn btn-danger'>Supprimer</a>
+                            <a href='backoffice.php?supprimer_personnel={$personnel['id_personnel']}' class='btn btn-danger'>➖</a>
                         </td>
                       </tr>";
             }
             ?>
         </tbody>
     </table>
-    <a href="ajouter_personnel.php" class="btn btn-primary">Ajouter un Membre du Personnel</a>
+    <a href="ajouter_personnel.php" class="btn btn-primary">➕</a>
 
     <?php
 require_once '../include/footer.php';

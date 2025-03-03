@@ -66,7 +66,7 @@ require_once '../include/header.php';
             <label for="image" class="form-label">Image</label>
             <input type="text" class="form-control" id="image" name="image" required>
         </div>
-        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="submit" class="btn btn-primary">➕</button>
     </form>
 </div>
 
