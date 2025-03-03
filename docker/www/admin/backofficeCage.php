@@ -53,7 +53,7 @@ require_once '../include/header.php';
                         </td>
                         <td>
                             <button onclick='supprimerCage({$cage['id_cage']})' class='btn btn-danger'>Supprimer</button>
-                        </td>
+                    </td>
                     </tr>";
             }
 ?>
