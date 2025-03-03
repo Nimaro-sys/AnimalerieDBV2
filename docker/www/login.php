@@ -31,6 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Veuillez remplir tous les champs.";
     }
 }
+$_SESSION['last_activity'] = time(); // Enregistre l'heure actuelle
+$_SESSION['expire_time'] = 15 * 60; // 15 minutes en secondes
 
 include_once './include/header.php';
 ?>

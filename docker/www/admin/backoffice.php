@@ -4,6 +4,24 @@ if (!isset($_SESSION['user'])) {
     header("Location: ../login.php");
     exit;
 }
+session_start();
+
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['user'])) {
+    header("Location: ../login.php");
+    exit();
+}
+
+// Vérifier si la session a expiré
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > 15 * 60)) {
+    session_unset();
+    session_destroy();
+    header("Location: ../login.php?timeout=true");
+    exit();
+}
+
+// Mettre à jour le timestamp d'activité
+$_SESSION['last_activity'] = time();
 
 require_once '../include/config.php';
 
