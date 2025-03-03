@@ -4,13 +4,21 @@ include_once './include/config.php';
 
 $error = "";
 
+// Vérifier si la session a expiré avant toute autre action
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > 15 * 60)) {
+    session_unset();
+    session_destroy();
+    header("Location: ./login.php?timeout=true");
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
     if ($username && $password) {
         try {
-            // Préparer et exécuter la requête pour vérifier les identifiants
+            // Vérifier les identifiants
             $stmt = $pdo->prepare("SELECT * FROM personnel WHERE login = :login");
             $stmt->execute(['login' => $username]);
             $user = $stmt->fetch();
@@ -18,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($user && $password === $user['mot_de_passe']) {
                 $_SESSION['user'] = $username;
                 $_SESSION['username'] = $user['prenom'];
-                $_SESSION['last_activity'] = time();
+                $_SESSION['last_activity'] = time(); // Mise à jour de l'activité
                 header("Location: ./admin/backoffice.php");
                 exit;
             } else {
@@ -31,8 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Veuillez remplir tous les champs.";
     }
 }
-$_SESSION['last_activity'] = time(); // Enregistre l'heure actuelle
-$_SESSION['expire_time'] = 15 * 60; // 15 minutes en secondes
 
 include_once './include/header.php';
 ?>
@@ -41,9 +47,16 @@ include_once './include/header.php';
 
 <div class="container mt-5">
     <h2>Connexion Employé</h2>
+    
+    <!-- Affichage du message de session expirée -->
+    <?php if (isset($_GET['timeout'])): ?>
+        <div class="alert alert-warning">Votre session a expiré. Veuillez vous reconnecter.</div>
+    <?php endif; ?>
+
     <?php if (!empty($error)): ?>
         <div class="alert alert-danger"><?php echo htmlspecialchars($error); ?></div>
     <?php endif; ?>
+
     <form method="POST">
         <div class="mb-3">
             <label for="username" class="form-label">Nom d'utilisateur</label>
