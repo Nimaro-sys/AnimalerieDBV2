@@ -15,7 +15,7 @@ if (isset($_GET['supprimer_personnel'])) {
     header("Location: ../admin/backoffice.php");
     exit;
 }
-require_once '../include/header.php';
+require_once '../include/headerAdmin.php';
 ?>
 <!-- Boutons page backoffice-->
 

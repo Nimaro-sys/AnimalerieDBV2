@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require_once '../include/header.php';
+require_once '../include/headerAdmin.php';
 ?>
 
 <div class="container mt-5">

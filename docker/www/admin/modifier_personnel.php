@@ -46,7 +46,7 @@ if (!$personnel) {
     exit;
 }
 
-require_once '../include/header.php';
+require_once '../include/headerAdmin.php';
 ?>
 
 <h3>Modifier le Personnel</h3>

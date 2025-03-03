@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refuge RKGT</title>
+    <title>Refuge RKGT - Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style_index.css">
-    <link rel="stylesheet" href="css/style_guichard.css">
-    <link rel="stylesheet" href="css/style_romain.css">
-    <link rel="stylesheet" href="css/style_kenan.css">
+    <link rel="stylesheet" href="../css/style_index.css">
+    <link rel="stylesheet" href="../css/style_guichard.css">
+    <link rel="stylesheet" href="../css/style_romain.css">
+    <link rel="stylesheet" href="../css/style_kenan.css">
     <style>
         /* Style du menu burger custom */
         #burgerButton {
@@ -46,12 +46,11 @@
         }
 
         h2 {
-    color: white;
-    font-family: 'Poppins', sans-serif; /* Police élégante */
-    font-weight: 600; /* Un peu plus épais mais pas trop */
-    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); /* Effet lumineux subtil */
-}
-
+            color: white;
+            font-family: 'Poppins', sans-serif; /* Police élégante */
+            font-weight: 600; /* Un peu plus épais mais pas trop */
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5); /* Effet lumineux subtil */
+        }
     </style>
 </head>
 <body>
@@ -59,14 +58,14 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Refuge RKGT</a>
+            <a class="navbar-brand" href="../index.php">Refuge RKGT</a>
             
             <!-- Menu burger custom -->
             <button id="burgerButton" class="btn btn-outline-light me-3">☰</button>
             <div id="burgerMenu" class="nav flex-column bg-dark p-2">
-                <a class="nav-link text-white fw-bold" href="index.php">Accueil</a>
-                <a class="nav-link text-white fw-bold" href="login.php">Se connecter</a>
-                <a class="nav-link text-white fw-bold" href="./admin/backoffice.php">Gérer le site</a>
+                <a class="nav-link text-white fw-bold" href="../index.php">Accueil</a>
+                <a class="nav-link text-white fw-bold" href="../login.php">Se connecter</a>
+                <a class="nav-link text-white fw-bold" href="../admin/backoffice.php">Gérer le site</a>
             </div>
 
             <!-- Bouton du menu Bootstrap -->
@@ -80,14 +79,17 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link me-3" href="index.php">Animaux</a></li>
-                    <li class="nav-item"><a class="nav-link me-3" href="personnel.php">Personnel</a></li>
+                    <li class="nav-item"><a class="nav-link me-3" href="../index.php">Animaux</a></li>
+                    <li class="nav-item"><a class="nav-link me-3" href="../personnel.php">Personnel</a></li>
                 </ul>
 
                 <ul class="navbar-nav ms-auto">
                     <?php if (isset($_SESSION['username'])): ?>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Bonjour, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../logout.php">Déconnexion</a>
                         </li>
                     <?php endif; ?>
                 </ul>
@@ -108,4 +110,6 @@
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="JS/script.js"></script>
+<script src="../JS/script.js"></script>
+</body>
+</html>

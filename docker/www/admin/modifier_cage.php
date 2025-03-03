@@ -36,7 +36,7 @@ if (!$cage) {
 }
 
 // Inclure l'en-tête de la page
-require_once '../include/header.php';
+require_once '../include/headerAdmin.php';
 ?>
 
 <div class="container mt-5">
