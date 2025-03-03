@@ -78,10 +78,10 @@ include_once './include/footer.php';
 
 <style>
     label {
-        color: white;
+        color: black;
     }
     input {
-        color: white;
+        color: black;
         background-color: #333;
         border: 1px solid #555;
     }
