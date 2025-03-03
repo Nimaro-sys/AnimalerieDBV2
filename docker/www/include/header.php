@@ -44,6 +44,10 @@
             color: white;
             font-weight: 600;
         }
+        /* Ajouter un peu d'espace au-dessus des éléments du menu */
+.navbar-nav {
+    margin-top: 10px; /* Ajuste la valeur selon le décalage souhaité */
+}
 
         h2 {
     color: white;
