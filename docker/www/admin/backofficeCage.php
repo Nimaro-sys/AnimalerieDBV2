@@ -34,7 +34,7 @@ require_once '../include/headerAdmin.php';
     <a href="ajouter_cage.php" class="btn btn-primary">Ajouter une Cage</a>
     <a href="login.php" class="btn btn-danger">Déconnexion</a>
 
-   
+
     <h3>Liste des cages</h3>
     <table class="table table-bordered">
         <thead>

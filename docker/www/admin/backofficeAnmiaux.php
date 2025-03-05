@@ -69,7 +69,7 @@ require_once '../include/headerAdmin.php';
                         <td>{$animal['pays']}</td>
                         <td>{$animal['image']}</td>
                         <td>
-                            <a href='#' class='btn btn-primary'>✏</a>
+                            <a href='modifier_animal.php?id={$animal['id_animal']}' class='btn btn-primary'>✏</a>
                         </td>
                         <td>
                             <a href='backoffice.php?supprimer_animal={$animal['id_animal']}' class='btn btn-danger'>➖</a>
