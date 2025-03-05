@@ -58,11 +58,7 @@ require_once '../include/headerAdmin.php';
                             <a href='modifier_cage.php?id={$cage['id_cage']}' class='btn btn-primary'>✏</a>
                         </td>
                         <td>
-<<<<<<< Updated upstream
                             <a href='supprimer_cage.php?id={$cage['id_cage']}' class='btn btn-danger'>➖</a>
-=======
-                            <button onclick='supprimer_cage.php?id=({$cage['id_cage']})' class='btn btn-danger'>➖</button>
->>>>>>> Stashed changes
                         </td>
                     </tr>";
             }
