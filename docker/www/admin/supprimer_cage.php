@@ -16,6 +16,7 @@ if ($id_cage <= 0) {
 }
 
 try {
+<<<<<<< Updated upstream
     // Libérer les animaux avant de supprimer la cage
     $stmt = $pdo->prepare("UPDATE animal SET id_cage=NULL WHERE id_cage=?");
     $stmt->execute([$id_cage]);
@@ -27,6 +28,13 @@ try {
     // Redirection après suppression réussie
     header("Location: backofficeCage.php?success=cage_supprimee");
     exit;
+=======
+    $stmt = $pdo->prepare("UPDATE animal SET id_cage =NULL WHERE id_cage=?");
+    $stmt->execute([$id_cage]);
+    $stmt = $pdo->prepare("DELETE FROM cage WHERE id_cage=?");
+    $stmt->execute([$id_cage]);
+    echo json_encode(['success' => true]);
+>>>>>>> Stashed changes
 
 } catch (PDOException $e) {
     // Redirection en cas d'erreur avec un message
