@@ -17,7 +17,7 @@ require_once 'include/header.php';
 
 <div class="container mt-5">
     <h2>Formulaire d'adoption pour <?php echo htmlspecialchars($animal['nom']); ?></h2>
-    <form method="POST" action="process_adoption.php">
+    <form method="POST" action="index.php">
         <div class="mb-3">
             <label for="adopterName" class="form-label">Votre nom</label>
             <input type="text" class="form-control" id="adopterName" name="adopterName" required>
