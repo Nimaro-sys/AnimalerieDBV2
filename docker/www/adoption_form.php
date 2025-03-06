@@ -31,7 +31,7 @@ require_once 'include/header.php';
             <input type="text" class="form-control" id="adopterPhone" name="adopterPhone" required>
         </div>
         <input type="hidden" name="animal_id" value="<?php echo $animal['id_animal']; ?>">
-        <button type="submit" class="btn btn-primary">adopter <?php echo $animal['nom'] ?></button>
+        <button type="submit" class="btn btn-success">Adopter <?php echo $animal['nom'] ?></button>
     </form>
 </div>
 

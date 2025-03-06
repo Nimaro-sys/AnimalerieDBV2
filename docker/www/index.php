@@ -50,7 +50,7 @@ $especes = $requete_especes->fetchAll(PDO::FETCH_ASSOC);
                         </option>
                     <?php endforeach; ?>
                 </select>
-                <button type="submit" class="btn btn-primary" aria-label="Appliquer le filtre">Filtrer</button>
+                <button type="submit" class="btn btn-success" aria-label="Appliquer le filtre">Filtrer</button>
             </form>
 
             <div class="row">
